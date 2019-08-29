@@ -22,16 +22,16 @@
 
 .experience-list li{
     list-style: none;
-        margin-bottom: 0px !important;
-        position: relative;
+    margin-bottom: 0px !important;
+    position: relative;
     padding: 9px 0 0 25px;
     border-left: 1px solid #d9d9d9;
     
 }
 
+/*只有一个li*/
 .experience-list li:nth-last-child(1):first-child{
-
-        border: none;
+    border: none;
     padding: 0;
 }
 
@@ -270,7 +270,7 @@ progress::-moz-progress-value {
     margin-left: 20px;
     visibility: hidden;
     cursor: pointer;
-    display: none;
+    
 
 }
 
@@ -280,7 +280,7 @@ progress::-moz-progress-value {
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    display: none;
+    
     
 }
 
@@ -290,7 +290,7 @@ progress::-moz-progress-value {
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    display: none;
+    
     
 }
 
@@ -306,7 +306,7 @@ ul li{
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    display: none;
+    
     
 }
 
@@ -317,7 +317,7 @@ ul li{
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    display: none;
+    
     
 }
 

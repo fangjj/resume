@@ -12,20 +12,38 @@ if (!String.prototype.format) {
 }
 
 
-function jim() {
-    $('.item-add').css("display","block");
-    $('.item-remove').css("display","block");
+function debug() {
+    $('.info-header').hover(function() {
+        /* Stuff to do when the mouse enters the element */
+        $(this).children('.unit-remove').css('visibility', 'visible');
+        $(this).children('.item-add').css('visibility', 'visible');
+
+    }, function() {
+        /* Stuff to do when the mouse leaves the element */
+        $(this).children('.unit-remove').css('visibility', 'hidden');
+        $(this).children('.item-add').css('visibility', 'hidden');
+    });
+
+    $('.info-unit ul li').hover(function() {
+        /* Stuff to do when the mouse enters the element */
+        $(this).children('.item-remove').css('visibility', 'visible');
+
+    }, function() {
+        /* Stuff to do when the mouse leaves the element */
+        $(this).children('.item-remove').css('visibility', 'hidden');
+    });
+    $("[contenteditable|='false']").attr("contenteditable", true)
 }
 
 jQuery(document).ready(function($) {
-    $(".left-label").attr('contenteditable', 'true');
-    $(".label-value").attr('contenteditable', 'true');
-    $(".info-title").attr('contenteditable', 'true');
-    $("h3").attr('contenteditable', 'true');
-    $("p").attr('contenteditable', 'true');
-    $(".right-paragraph p").attr('contenteditable', 'true');
-    $("#username").attr('contenteditable', 'true');
-    $("#persona-tag").attr('contenteditable', 'true');
+    // $(".left-label").attr('contenteditable', 'true');
+    // $(".label-value").attr('contenteditable', 'true');
+    // $(".info-title").attr('contenteditable', 'true');
+    // $("h3").attr('contenteditable', 'true');
+    // $("p").attr('contenteditable', 'true');
+    // $(".right-paragraph p").attr('contenteditable', 'true');
+    // $("#username").attr('contenteditable', 'true');
+    // $("#persona-tag").attr('contenteditable', 'true');
     $(".info-unit ul li").append('<span class="item-remove"><i class="iconfont icon-delete"></i></span>');
     
     $(".info-unit").filter(function(index) {
@@ -50,25 +68,7 @@ jQuery(document).ready(function($) {
         $(".weixin img").attr('src', $("#weixin-url").val());
     });
 
-    $('.info-header').hover(function() {
-        /* Stuff to do when the mouse enters the element */
-        $(this).children('.unit-remove').css('visibility', 'visible');
-        $(this).children('.item-add').css('visibility', 'visible');
-
-    }, function() {
-        /* Stuff to do when the mouse leaves the element */
-        $(this).children('.unit-remove').css('visibility', 'hidden');
-        $(this).children('.item-add').css('visibility', 'hidden');
-    });
-
-    $('.info-unit ul li').hover(function() {
-        /* Stuff to do when the mouse enters the element */
-        $(this).children('.item-remove').css('visibility', 'visible');
-
-    }, function() {
-        /* Stuff to do when the mouse leaves the element */
-        $(this).children('.item-remove').css('visibility', 'hidden');
-    });
+    
 
     $('.unit-remove').click(function(event) {
         $(this).closest(".info-unit").remove();
