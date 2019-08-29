@@ -12,6 +12,11 @@ if (!String.prototype.format) {
 }
 
 
+function jim() {
+    $('.item-add').css("display","block");
+    $('.item-remove').css("display","block");
+}
+
 jQuery(document).ready(function($) {
     $(".left-label").attr('contenteditable', 'true');
     $(".label-value").attr('contenteditable', 'true');
